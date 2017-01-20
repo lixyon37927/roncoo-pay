@@ -1,19 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>com.roncoo.pay.common</groupId>
 	<artifactId>roncoo-pay</artifactId>
 	<version>1.0.0-SNAPSHOT</version>
 	<packaging>pom</packaging>
-
 	<name>roncoo-pay</name>
-	<url>http://maven.apache.org</url>
 
-	<organization>
-		<name>Roncoo</name>
-		<url>http://www.roncoo.com</url>
-	</organization>
 
 	<modules>
 		<!-- core 是支付系统核心基础包 -->
@@ -35,18 +30,76 @@
 	</modules>
 
 	<!-- 配置maven地址 -->
-	<distributionManagement>
+	<repositories>
 		<repository>
-			<id>nexus-releases</id>
-			<name>Nexus Release Repository</name>
-			<url>http://192.168.1.221:8081/nexus/content/repositories/releases/</url>
+			<id>aliyun-repos</id>
+			<name>aliyun Repository</name>
+			<url>http://maven.aliyun.com/nexus/content/groups/public</url>
 		</repository>
-		<snapshotRepository>
-			<id>nexus-snapshots</id>
-			<name>Nexus Snapshot Repository</name>
-			<url>http://192.168.1.221:8081/nexus/content/repositories/snapshots/</url>
-		</snapshotRepository>
-	</distributionManagement>
+		<repository>
+			<id>jeecg</id>
+			<name>jeecg Repository</name>
+			<url>http://maven.jeecg.org/nexus/content/repositories/jeecg</url>
+			<snapshots>
+				<enabled>false</enabled>
+			</snapshots>
+		</repository>
+		<repository>
+			<id>jeecg-snapshots</id>
+			<name>jeecg-snapshots Repository</name>
+			<url>http://maven.jeecg.org/nexus/content/repositories/snapshots</url>
+			<snapshots>
+				<enabled>true</enabled>
+			</snapshots>
+		</repository>
+		<repository>
+			<id>java-repos</id>
+			<name>Java Repository</name>
+			<url>http://download.java.net/maven/2/</url>
+		</repository>
+
+		<repository>
+			<id>springsource-repos</id>
+			<name>SpringSource Repository</name>
+			<url>http://repo.spring.io/release/</url>
+		</repository>
+
+		<repository>
+			<id>central-repos</id>
+			<name>Central Repository</name>
+			<url>http://repo.maven.apache.org/maven2</url>
+		</repository>
+
+		<repository>
+			<id>central-repos2</id>
+			<name>Central Repository 2</name>
+			<url>http://repo1.maven.org/maven2/</url>
+		</repository>
+
+		<repository>
+			<id>activiti-repos</id>
+			<name>Activiti Repository</name>
+			<url>https://maven.alfresco.com/nexus/content/groups/public</url>
+		</repository>
+
+		<repository>
+			<id>activiti-repos2</id>
+			<name>Activiti Repository 2</name>
+			<url>https://app.camunda.com/nexus/content/groups/public</url>
+		</repository>
+		<repository>
+			<id>thinkgem-repos2</id>
+			<name>ThinkGem Repository 2</name>
+			<url>https://raw.github.com/thinkgem/repository/master</url>
+		</repository>
+	</repositories>
+	<pluginRepositories>
+		<pluginRepository>
+			<id>aliyun-repos</id>
+			<name>aliyun Repository</name>
+			<url>http://maven.aliyun.com/nexus/content/groups/public</url>
+		</pluginRepository>
+	</pluginRepositories>
 
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -73,7 +126,7 @@
 		<activeMQ.version>5.11.4</activeMQ.version>
 		<javassist.version>3.12.1.GA</javassist.version>
 		<transaction.version>1.1</transaction.version>
-		
+
 	</properties>
 
 	<dependencyManagement>
@@ -226,7 +279,7 @@
 				<artifactId>log4j</artifactId>
 				<version>${log4j_version}</version>
 			</dependency>
-			
+
 			<dependency>
 				<groupId>javassist</groupId>
 				<artifactId>javassist</artifactId>
@@ -335,18 +388,6 @@
 			</dependency>
 
 			<dependency>
-				<groupId>alipay</groupId>
-				<artifactId>alipay-trade-sdk</artifactId>
-				<version>1.0</version>
-			</dependency>
-
-			<dependency>
-				<groupId>alipay</groupId>
-				<artifactId>alipay-sdk-java20151021120052</artifactId>
-				<version>1.0</version>
-			</dependency>
-
-			<dependency>
 				<groupId>jaxen</groupId>
 				<artifactId>jaxen</artifactId>
 				<version>1.1.6</version>
@@ -429,35 +470,4 @@
 			</plugin>
 		</plugins>
 	</build>
-
-	<!-- developer -->
-	<developers>
-		<developer>
-			<name>Along</name>
-			<id>shen.jialong</id>
-			<email>shenjl@roncoo.com</email>
-			<roles>
-				<role>Developer</role>
-			</roles>
-			<timezone>+8</timezone>
-		</developer>
-		<developer>
-			<name>peter</name>
-			<id>hu.peter</id>
-			<email>hupt@roncoo.com</email>
-			<roles>
-				<role>Developer</role>
-			</roles>
-			<timezone>+8</timezone>
-		</developer>
-		<developer>
-			<name>hugo</name>
-			<id>zeng.hao</id>
-			<email>zengh@roncoo.com</email>
-			<roles>
-				<role>Developer</role>
-			</roles>
-			<timezone>+8</timezone>
-		</developer>
-	</developers>
 </project>

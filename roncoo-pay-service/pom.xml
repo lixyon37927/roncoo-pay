@@ -48,6 +48,20 @@
 			<artifactId>shiro-web</artifactId>
 			<version>1.2.5</version>
 		</dependency>
+		<dependency>
+			<groupId>com.alipay</groupId>
+			<artifactId>alipay-trade-sdk</artifactId>
+			<version>1.0.0-SNAPSHOT</version>
+			<scope>system</scope> 
+			<systemPath>${basedir}/src/lib/alipay-trade-sdk.jar</systemPath> 
+		</dependency>
+		<dependency>
+			<groupId>com.alipay</groupId>
+			<artifactId>alipay-sdk-java20151021120052</artifactId>
+			<version>1.0.0-SNAPSHOT</version>
+			<scope>system</scope>
+			<systemPath>${basedir}/src/lib/alipay-sdk-java20151021120052.jar</systemPath> 
+		</dependency>
 		
 
 	</dependencies>
