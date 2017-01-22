@@ -36,7 +36,22 @@
 			<!-- 表示开发的时候引入，发布的时候不会加载此包 -->
 			<scope>test</scope>
 		</dependency>
+		
+			<dependency>
+			<groupId>alipay</groupId>
+			<artifactId>alipay-sdk-java20151021120052</artifactId>
+			<scope>system</scope>
+			<version>1.0.0-SNAPSHOT</version>
+			<systemPath>${basedir}/lib/alipay-sdk-java20151021120052.jar</systemPath>
+		</dependency>
 
+		<dependency>
+			<groupId>alipay</groupId>
+			<artifactId>alipay-trade-sdk</artifactId>
+			<version>1.0.0-SNAPSHOT</version>
+			<scope>system</scope>
+			<systemPath>${basedir}/lib/alipay-trade-sdk.jar</systemPath>
+		</dependency>
 
 	</dependencies>
 
@@ -86,48 +101,6 @@
 								${project.build.directory}/lib
 							</outputDirectory>
 						</configuration>
-					</execution>
-				</executions>
-			</plugin>
-
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-deploy-plugin</artifactId>
-				<version>2.7</version>
-				<configuration>
-					<uniqueVersion>false</uniqueVersion>
-				</configuration>
-			</plugin>
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-eclipse-plugin</artifactId>
-				<version>2.8</version>
-			</plugin>
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-compiler-plugin</artifactId>
-				<version>3.2</version>
-				<configuration>
-					<failOnError>true</failOnError>
-					<verbose>true</verbose>
-					<fork>true</fork>
-					<compilerArgument>-nowarn</compilerArgument>
-					<source>1.7</source>
-					<target>1.7</target>
-					<encoding>UTF-8</encoding>
-				</configuration>
-			</plugin>
-
-			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
-				<artifactId>maven-source-plugin</artifactId>
-				<version>2.1.2</version>
-				<executions>
-					<execution>
-						<id>attach-sources</id>
-						<goals>
-							<goal>jar</goal>
-						</goals>
 					</execution>
 				</executions>
 			</plugin>

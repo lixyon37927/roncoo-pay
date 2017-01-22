@@ -27,7 +27,6 @@
 		<jstl.version>1.2</jstl.version>
 		<druid.version>1.0.19</druid.version>
 		<fastjson.version>1.2.11</fastjson.version>
-		<javaee-api.version>7.0</javaee-api.version>
 		<commons-lang.version>2.6</commons-lang.version>
 		<commons-io.version>2.5</commons-io.version>
 		<shiro.version>1.2.4</shiro.version>
@@ -131,23 +130,31 @@
 			<version>${spring.version}</version>
 		</dependency>
 
-
+		<!-- servlet api -->
 		<dependency>
-			<groupId>javax</groupId>
-			<artifactId>javaee-api</artifactId>
-			<version>${javaee-api.version}</version>
+			<groupId>javax.servlet</groupId>
+			<artifactId>javax.servlet-api</artifactId>
+			<version>3.0.1</version>
+			<scope>provided</scope>
+		</dependency>
+		<!-- jsp api -->
+		<dependency>
+			<groupId>javax.servlet.jsp</groupId>
+			<artifactId>jsp-api</artifactId>
+			<version>2.2</version>
+			<scope>provided</scope>
+		</dependency>
+		<!-- jstl -->
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>jstl</artifactId>
+			<version>1.2</version>
 		</dependency>
 
 		<dependency>
 			<groupId>cglib</groupId>
 			<artifactId>cglib</artifactId>
 			<version>${cglib.version}</version>
-		</dependency>
-
-		<dependency>
-			<groupId>jstl</groupId>
-			<artifactId>jstl</artifactId>
-			<version>${jstl.version}</version>
 		</dependency>
 
 		<dependency>
@@ -193,12 +200,8 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>
-				<version>3.2</version>
+				<version>3.1</version>
 				<configuration>
-					<failOnError>true</failOnError>
-					<verbose>true</verbose>
-					<fork>true</fork>
-					<compilerArgument>-nowarn</compilerArgument>
 					<source>1.7</source>
 					<target>1.7</target>
 					<encoding>UTF-8</encoding>

@@ -80,17 +80,11 @@
 							<p>
 								<span>龙果支付后台</span>
 							</p>
-							<p>
-								平台架构、业务流程请登录龙果学院看视频教程 :<a href="http://www.roncoo.com" target="_blank">http://www.roncoo.com</a>
-							</p>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
-	</div>
-	<div id="footer">
-		Copyright &copy; 2015-2016 <a href="http://www.roncoo.com" target="_blank">龙果学院</a>
 	</div>
 </body>
 </html>

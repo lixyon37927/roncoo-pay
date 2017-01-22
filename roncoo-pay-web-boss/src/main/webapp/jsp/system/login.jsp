@@ -40,7 +40,7 @@
 								<label>帐&nbsp;&nbsp;&nbsp;&nbsp;号：</label>
 							</li>
 							<li>
-								<input type="text" name="loginName" size="18" class="login_input" />
+								<input type="text" name="loginName" size="18" class="login_input" value="admin" />
 							</li>
 						</ul>
 						<ul>
@@ -48,7 +48,7 @@
 								<label>密&nbsp;&nbsp;&nbsp;&nbsp;码：</label>
 							</li>
 							<li>
-								<input type="password" name="roncooPwd" size="18" class="login_input" />
+								<input type="password" name="roncooPwd" size="18" class="login_input" value="123456" />
 							</li>
 						</ul>
 					</div>
